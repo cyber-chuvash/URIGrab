@@ -7,24 +7,24 @@ from urigrab.tld_manager.retriever.abc import AbstractTLDRetriever
 
 
 class URLLibTLDRetriever(AbstractTLDRetriever):
-    DEFAULT_IANA_URL: str = "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
-    DEFAULT_PAGE_PARSER_CLASS: Type[AbstractTLDPageParser] = IANATLDPageParser
-    DEFAULT_REQ_HEADERS: Dict[str, str] = {
+    _DEFAULT_IANA_URL: str = "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+    _DEFAULT_PAGE_PARSER_CLASS: Type[AbstractTLDPageParser] = IANATLDPageParser
+    _DEFAULT_REQ_HEADERS: Dict[str, str] = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) '
                       'AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/87.0.4280.67 Safari/537.36'
     }
 
     def __init__(self, *,
-                 tld_url: str = DEFAULT_IANA_URL,
+                 tld_url: str = _DEFAULT_IANA_URL,
                  request_headers: Optional[Dict[str, str]] = None,
                  page_parser: Optional[AbstractTLDPageParser] = None) -> None:
         self._tld_url = tld_url
-        self._req_headers = request_headers or self.DEFAULT_REQ_HEADERS.copy()
+        self._req_headers = request_headers or self._DEFAULT_REQ_HEADERS.copy()
         if page_parser is not None:
             self._page_parser = page_parser
         else:
-            self._page_parser = self.DEFAULT_PAGE_PARSER_CLASS()
+            self._page_parser = self._DEFAULT_PAGE_PARSER_CLASS()
 
     def get_top_level_domains(self) -> AbstractParsedTLDPage:
         tld_page: str = self._fetch()

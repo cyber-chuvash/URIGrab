@@ -8,7 +8,7 @@ from urigrab.tld_manager.retriever.urllib_retriever import URLLibTLDRetriever
 
 
 class TLDManager(AbstractTLDManager):
-    DEFAULT_TLD_RETRIEVER_CLASS: Type[AbstractTLDRetriever] = URLLibTLDRetriever
+    _DEFAULT_TLD_RETRIEVER_CLASS: Type[AbstractTLDRetriever] = URLLibTLDRetriever
 
     def __init__(self, *,
                  tld_retriever: Optional[AbstractTLDRetriever] = None):
@@ -20,7 +20,7 @@ class TLDManager(AbstractTLDManager):
         if tld_retriever is not None:
             self._tld_retriever = tld_retriever
         else:
-            self._tld_retriever = self.DEFAULT_TLD_RETRIEVER_CLASS()
+            self._tld_retriever = self._DEFAULT_TLD_RETRIEVER_CLASS()
 
     @property
     def last_update(self) -> datetime:
