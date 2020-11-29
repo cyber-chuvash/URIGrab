@@ -1,9 +1,9 @@
 from typing import Optional, Type, Tuple, Iterator
 
-from urigrab.tld_manager.abc import AbstractTLDManager
 from urigrab.tld_manager import TLDManager
+from urigrab.tld_manager.abc import AbstractTLDManager
+from urigrab.uri_parser import RegexURIParser
 from urigrab.uri_parser.abc import AbstractURIParser
-from urigrab.uri_parser.regex_parser import RegexURIParser
 
 
 class URIGrabber:
