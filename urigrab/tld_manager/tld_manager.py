@@ -2,8 +2,8 @@ from datetime import datetime
 from typing import Optional, Type, Tuple
 
 from urigrab.tld_manager.abc import AbstractTLDManager
-from urigrab.tld_manager.parser.abc import AbstractParsedTLDPage
 from urigrab.tld_manager.retriever.abc import AbstractTLDRetriever
+from urigrab.tld_manager.tld_page_parser.abc import AbstractParsedTLDPage
 from urigrab.tld_manager.retriever.urllib_retriever import URLLibTLDRetriever
 
 

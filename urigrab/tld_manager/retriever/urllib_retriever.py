@@ -1,8 +1,8 @@
 import urllib.request
 from typing import Optional, Dict, Type
 
-from urigrab.tld_manager.parser import IANATLDPageParser
-from urigrab.tld_manager.parser.abc import AbstractTLDPageParser, AbstractParsedTLDPage
+from urigrab.tld_manager.tld_page_parser import IANATLDPageParser
+from urigrab.tld_manager.tld_page_parser.abc import AbstractTLDPageParser, AbstractParsedTLDPage
 from urigrab.tld_manager.retriever.abc import AbstractTLDRetriever
 
 

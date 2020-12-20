@@ -1,6 +1,6 @@
 from abc import ABC
 
-from urigrab.tld_manager.parser.abc import AbstractParsedTLDPage
+from urigrab.tld_manager.tld_page_parser.abc import AbstractParsedTLDPage
 
 
 class AbstractTLDRetriever(ABC):
