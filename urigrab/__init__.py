@@ -1,7 +1,11 @@
-from typing import Optional, Tuple, Iterator
+from typing import (
+    Iterator,
+    Optional,
+    Tuple,
+)
 
-from urigrab.tld_manager import TLDManager
 from urigrab.grabber import URIGrabber
+from urigrab.tld_manager import TLDManager
 
 __all__ = (
     "URIGrabber", "get_uris", "has_uris", "iter_uris"

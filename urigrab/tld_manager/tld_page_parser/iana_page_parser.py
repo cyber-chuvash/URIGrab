@@ -1,11 +1,18 @@
 import encodings.idna
 import re
-from datetime import datetime
 from dataclasses import dataclass
+from datetime import datetime
+from typing import (
+    Iterable,
+    Iterator,
+    List,
+    Tuple,
+)
 
-from typing import List, Tuple, Iterable, Iterator
-
-from urigrab.tld_manager.tld_page_parser.abc import AbstractTLDPageParser, AbstractParsedTLDPage
+from urigrab.tld_manager.tld_page_parser.abc import (
+    AbstractParsedTLDPage,
+    AbstractTLDPageParser,
+)
 from urigrab.tld_manager.tld_page_parser.exceptions import IANAMetadataParsingError
 
 

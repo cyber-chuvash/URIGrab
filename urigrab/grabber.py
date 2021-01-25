@@ -1,4 +1,9 @@
-from typing import Optional, Type, Tuple, Iterator
+from typing import (
+    Iterator,
+    Optional,
+    Tuple,
+    Type,
+)
 
 from urigrab.tld_manager import TLDManager
 from urigrab.tld_manager.abc import AbstractTLDManager

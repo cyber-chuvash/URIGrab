@@ -1,5 +1,9 @@
 import re
-from typing import Tuple, Optional, Iterator
+from typing import (
+    Iterator,
+    Optional,
+    Tuple,
+)
 
 from urigrab.uri_parser.abc import AbstractURIParser
 

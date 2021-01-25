@@ -1,5 +1,5 @@
+from collections.abc import Iterator
 from typing import Tuple
-from collections import Iterator
 
 import pytest
 
@@ -17,6 +17,7 @@ def test_uri_grabber_properly_inited(uri_grabber: URIGrabber):
     assert uri_grabber._parser is not None
 
     assert uri_grabber._tld_manager.last_update is not None
+    assert uri_grabber._tld_manager.tld_version is not None
     assert uri_grabber._parser._uri_regex is not None
 
 

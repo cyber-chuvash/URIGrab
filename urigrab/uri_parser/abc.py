@@ -1,5 +1,8 @@
 from abc import ABC
-from typing import Tuple, Iterator
+from typing import (
+    Iterator,
+    Tuple,
+)
 
 
 class AbstractURIParser(ABC):
