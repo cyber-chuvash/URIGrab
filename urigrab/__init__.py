@@ -5,7 +5,6 @@ from typing import (
 )
 
 from urigrab.grabber import URIGrabber
-from urigrab.tld_manager import TLDManager
 
 __all__ = (
     "URIGrabber", "get_uris", "has_uris", "iter_uris"
