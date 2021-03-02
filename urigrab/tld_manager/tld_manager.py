@@ -21,10 +21,7 @@ class TLDManager(AbstractTLDManager):
         self._list_version: Optional[str] = None
         self._tld_list: Optional[Tuple[str, ...]] = None
 
-        if tld_retriever is not None:
-            self._tld_retriever = tld_retriever
-        else:
-            self._tld_retriever = self._DEFAULT_TLD_RETRIEVER_CLASS()
+        self._tld_retriever = tld_retriever or self._DEFAULT_TLD_RETRIEVER_CLASS()
 
     @property
     def last_update(self) -> datetime:
